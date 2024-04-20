@@ -78,3 +78,12 @@
   "top explorer endpoint"             
   <em>............-- Response body, indicating the top explorer endpoint -</em><br>
 
+- http -b http://127.0.0.1:9000/explorer/
+<!-- When you use -b, only the response body will be displayed, and the headers will be omitted. -->
+
+- http -b http://127.0.0.1:9000/explorer/"Noah Weiser"
+
+- http PUT localhost:9000/explorer/ name="Noah Weiser" country="DE" description="Myopic machete man"
+- http PATCH localhost:9000/explorer/ name="Noah Weiser" country="DE" description="Myopic machete man"
+- http -b DELETE localhost:9000/explorer/Edmund%20Hillary 
+- http -b DELETE localhost:9000/explorer/"Edmund Hillary"
