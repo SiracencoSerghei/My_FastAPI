@@ -1,45 +1,80 @@
 ## using HTTPie:
 
 - http localhost:9000/echo/Sergio 
-  #### responce: 
-  HTTP/1.1 200 OK                         # Response HTTP version and status code indicating success
-content-length: 16                      # Response header indicating the length of the content
-content-type: application/json          # Response header indicating the type of content (JSON)
-date: Sat, 20 Apr 2024 18:47:39 GMT     # Response header indicating the date and time of the response
-server: uvicorn                         # Response header indicating the server software
+  <em>............-- Response for http localhost:9000/echo/Sergio -</em><br>
+  <strong>*responce:*</strong>
 
-"echoing Sergio"                        # Response body, containing the echoed string "Sergio"
+  HTTP/1.1 200 OK                         
+  <em>............-- Response HTTP version and status code indicating success -</em><br>
+  *content-length: 16*                      
+  <em>............-- Response header indicating the length of the content -</em><br>
+  *content-type: application/json*          
+  <em>............-- Response header indicating the type of content (JSON) -</em><br>
+  *date: Sat, 20 Apr 2024 18:47:39 GMT*     
+  <em>............-- Response header indicating the date and time of the response -</em><br>
+  *server: uvicorn*                         
+  <em>............-- Response header indicating the server software -</em><br>
+
+  "echoing Sergio"                        
+  <em>............-- Response body, containing the echoed string "Sergio" -</em><br>
 
 - http -p HBh https://www.edu.goit.global/uk/calendar 
-  #### responce: 
-  GET /uk/calendar HTTP/1.1                    # Request method, path, and HTTP version
-Accept: */*                                  # Request header indicating acceptable content types
-Accept-Encoding: gzip, deflate               # Request header indicating acceptable content encodings
-Connection: keep-alive                        # Request header indicating persistent connection
-Host: www.edu.goit.global                    # Request header indicating the host
-User-Agent: HTTPie/3.2.2                     # Request header indicating the user agent
+  <em>............-- Response for http -p HBh https://www.edu.goit.global/uk/calendar -</em><br>
+  <strong>*responce:*</strong>
 
-HTTP/1.1 200 OK                               # Response HTTP version and status code
-Access-Control-Allow-Origin: *                # Response header allowing cross-origin resource sharing
-Age: 209625                                   # Response header indicating the age of the response
-Cache-Control: public, max-age=0, must-revalidate  # Response header controlling caching behavior
-Connection: keep-alive                        # Response header indicating persistent connection
-Content-Disposition: inline; filename="calendar"  # Response header indicating how to handle the content
-Content-Encoding: gzip                        # Response header indicating content encoding
-Content-Type: text/html; charset=utf-8        # Response header indicating content type and charset
-Date: Sat, 20 Apr 2024 18:44:19 GMT           # Response header indicating the date
-Etag: W/"f17f1b8a7ef77fd7a8b41a3aeab0515d"    # Response header indicating entity tag for cache validation
-Server: Vercel                                # Response header indicating the server
-Strict-Transport-Security: max-age=63072000   # Response header indicating strict transport security
+  GET /uk/calendar HTTP/1.1                    
+  <em>............-- Request method, path, and HTTP version -</em><br>
+  *Accept: */*                                  
+  <em>............-- Request header indicating acceptable content types -</em><br>
+  *Accept-Encoding: gzip, deflate*               
+  <em>............-- Request header indicating acceptable content encodings -</em><br>
+  *Connection: keep-alive*                        
+  <em>............-- Request header indicating persistent connection -</em><br>
+  *Host: www.edu.goit.global*                    
+  <em>............-- Request header indicating the host -</em><br>
+  *User-Agent: HTTPie/3.2.2*                     
+  <em>............-- Request header indicating the user agent -</em><br>
+
+  HTTP/1.1 200 OK                               
+  <em>............-- Response HTTP version and status code -</em><br>
+  *Access-Control-Allow-Origin: *                
+  <em>............-- Response header allowing cross-origin resource sharing -</em><br>
+  *Age: 209625*                                   
+  <em>............-- Response header indicating the age of the response -</em><br>
+  *Cache-Control: public, max-age=0, must-revalidate*  
+  <em>............-- Response header controlling caching behavior -</em><br>
+  *Connection: keep-alive*                        
+  <em>............-- Response header indicating persistent connection -</em><br>
+  *Content-Disposition: inline; filename="calendar"*  
+  <em>............-- Response header indicating how to handle the content -</em><br>
+  *Content-Encoding: gzip*                        
+  <em>............-- Response header indicating content encoding -</em><br>
+  *Content-Type: text/html; charset=utf-8*        
+  <em>............-- Response header indicating content type and charset -</em><br>
+  *Date: Sat, 20 Apr 2024 18:44:19 GMT*           
+  <em>............-- Response header indicating the date -</em><br>
+  *Etag: W/"f17f1b8a7ef77fd7a8b41a3aeab0515d"*    
+  <em>............-- Response header indicating entity tag for cache validation -</em><br>
+  *Server: Vercel*                                
+  <em>............-- Response header indicating the server -</em><br>
+  *Strict-Transport-Security: max-age=63072000*   
+  <em>............-- Response header indicating strict transport security -</em><br>
 
 - http http://127.0.0.1:9000/explorer/
-  #### responce:
-  HTTP/1.1 200 OK                     # HTTP status code indicating success
-  content-length: 23                  # Length of the response body in bytes
-  content-type: application/json      # Type of content in the response (JSON)
-  date: Sat, 20 Apr 2024 19:12:50 GMT # Date and time when the response was generated
-  server: uvicorn                     # Server software used to handle the request
+  <em>............-- Response for http http://127.0.0.1:9000/explorer/ -</em><br>
+  <strong>*responce:*</strong>
 
-  "top explorer endpoint"             # Response body, indicating the top explorer endpoint
+  HTTP/1.1 200 OK                     
+  <em>............-- HTTP status code indicating success -</em><br>
+  *content-length: 23*                  
+  <em>............-- Length of the response body in bytes -</em><br>
+  *content-type: application/json*      
+  <em>............-- Type of content in the response (JSON) -</em><br>
+  *date: Sat, 20 Apr 2024 19:12:50 GMT* 
+  <em>............-- Date and time when the response was generated -</em><br>
+  *server: uvicorn*                     
+  <em>............-- Server software used to handle the request -</em><br>
 
+  "top explorer endpoint"             
+  <em>............-- Response body, indicating the top explorer endpoint -</em><br>
 
