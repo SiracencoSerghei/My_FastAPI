@@ -1,3 +1,7 @@
+export PYTHONPATH=/home/Desktop/My_FastAPI/examples:$PYTHONPATH
+
+
+
 ## using HTTPie:
 
 - http localhost:9000/echo/Sergio 
@@ -87,3 +91,13 @@
 - http PATCH localhost:9000/explorer/ name="Noah Weiser" country="DE" description="Myopic machete man"
 - http -b DELETE localhost:9000/explorer/Edmund%20Hillary 
 - http -b DELETE localhost:9000/explorer/"Edmund Hillary"
+  
+
+- http -b http://127.0.0.1:9000/creature/
+- http -b http://127.0.0.1:9000/creature/"Yeti"
+- http PUT localhost:9000/creature/ name="Yeti" aka="Abominable Snowman" country="CN" area="Himalayas" description="Hirsute Himalayan"
+- http PATCH localhost:9000/creature/  name="Yeti" aka="Abominable Snowman" country="CN" area="Himalayas" description="Hirsute Himalayan"
+- http -b DELETE localhost:9000/creature/"Yeti"
+
+
+

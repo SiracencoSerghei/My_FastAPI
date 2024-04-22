@@ -1,7 +1,6 @@
+# My_FastAPI/examples/main_ex.py
 from fastapi import FastAPI
-
-from web import explorer, creature
-
+from web import creature, explorer
 app = FastAPI()
 app.include_router(explorer.router)
 app.include_router(creature.router)

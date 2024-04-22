@@ -1,4 +1,4 @@
-from model.creature import Creature
+from examples.model.creature import Creature
 
 # fake data, until we use a real database and SQL
 _creatures = [
@@ -24,7 +24,7 @@ def get_all() -> list[Creature]:
     return _creatures
 
 
-def get_one(name: str) -> Creature | None:
+def get(name: str) -> Creature | None:
     """Return one creature"""
     for _creature in _creatures:
         if _creature.name == name:
