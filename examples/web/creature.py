@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from model.creature import Creature
-from fake import creature as service
+# import fake.creature as service
+import data.creature as service
 
 router = APIRouter(prefix="/creature")
 
@@ -18,6 +19,7 @@ def get_one(name) -> Creature:
 # all the remaining endpoints do nothing yet:
 @router.post("/")
 def create(creature: Creature) -> Creature:
+    print(f"WEB {creature=}")
     return service.create(creature)
 
 

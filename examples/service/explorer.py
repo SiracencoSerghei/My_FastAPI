@@ -1,5 +1,6 @@
-from examples.model.explorer import Explorer
-import examples.fake.explorer as data
+from model.explorer import Explorer
+# import examples.fake.explorer as data
+import  data.explorer as data
 
 def get_all() -> list[Explorer]:
     return data.get_all()
@@ -8,6 +9,7 @@ def get_one(name: str) -> Explorer | None:
     return data.get(name)
 
 def create(explorer: Explorer) -> Explorer:
+    # print(f"SERVICE {explorer=}")
     return data.create(explorer)
 
 def replace(id, explorer: Explorer) -> Explorer:

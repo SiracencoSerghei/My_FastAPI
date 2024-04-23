@@ -6,7 +6,7 @@ authors = ["Serghei <siracencoserghei@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 annotated-types = "0.6.0"
 anyio = "4.3.0"
 build = "1.2.1"
@@ -68,6 +68,7 @@ virtualenv = "20.25.3"
 zipp = "3.18.1"
 opentelemetry-api = "^1.24.0"
 opentelemetry-sdk = "^1.24.0"
+psycopg2-binary = "^2.9.9"
 
 
 [build-system]

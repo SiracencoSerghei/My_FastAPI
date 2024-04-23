@@ -99,6 +99,10 @@ export PYTHONPATH=/home/Desktop/My_FastAPI/examples:$PYTHONPATH
 - http PATCH localhost:9000/creature/  name="Yeti" aka="Abominable Snowman" country="CN" area="Himalayas" description="Hirsute Himalayan"
 - http -b DELETE localhost:9000/creature/"Yeti"
 
+
+ http localhost:9000/explorer/
+ http localhost:9000/explorer
+
 ## pytest:
 
 - pytest -v test/unit/service/test_creature.py
