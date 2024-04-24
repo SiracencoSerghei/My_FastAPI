@@ -1,4 +1,4 @@
-from examples.model.explorer import Explorer
+from src.model.explorer import Explorer
 
 # fake data, replaced in Chapter 10 by a real database and SQL
 _explorers = [

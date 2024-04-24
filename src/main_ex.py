@@ -1,4 +1,4 @@
-# My_FastAPI/examples/main_ex.py
+# My_FastAPI/src/main_ex.py
 from fastapi import FastAPI
 from web import creature, explorer
 app = FastAPI()

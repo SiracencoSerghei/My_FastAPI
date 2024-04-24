@@ -1,8 +1,8 @@
-from examples.fake.creature import _creatures
+from src.fake.creature import _creatures
 
 
-from examples.model.creature import Creature
-from examples.service import creature as code
+from src.model.creature import Creature
+from src.service import creature as code
 
 # sample = [creature for creature in _creatures if creature.name == "Yeti"]
 sample = Creature(name="Yeti",
