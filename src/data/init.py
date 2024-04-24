@@ -20,7 +20,7 @@ def get_db(name: str|None = None, reset: bool = False):
         db_path = db_dir / db_name
         if not db_dir.exists():
             db_dir.mkdir(parents=True)  # Create the db directory if it doesn't exist
-        name = os.getenv("CRYPTID_SQLITE_DB", str(db_path))
+        name = str(db_dir / db_name)
     conn = connect(name, check_same_thread=False)
     curs = conn.cursor()
 

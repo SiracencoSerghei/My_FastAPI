@@ -1,10 +1,16 @@
+import pathlib
+import sys
+
+hw_path: str = str(pathlib.Path(__file__).resolve().parent.parent)
+sys.path.append(hw_path)
+print(f"{hw_path=}", sys.path)
+
 from .init import curs, conn
 from model.creature import Creature
 
 curs.execute(
     """CREATE TABLE IF NOT EXISTS creature (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT,
+                name text,
                 description TEXT,
                 country TEXT,
                 area TEXT,
@@ -14,9 +20,7 @@ curs.execute(
 
 def row_to_model(row: tuple) -> Creature:
     (name, description, country, area, aka) = row
-    return Creature(
-        name=row[0], country=row[1], description=row[2], area=row[3], aka=row[4]
-    )
+    return Creature(name, description, country, area, aka)
 
 
 def model_to_dict(creature: Creature) -> dict:
@@ -37,7 +41,6 @@ def get_all() -> list[Creature]:
 
 
 def create(creature: Creature) -> Creature:
-    print(f"DATA {creature=}")
     qry = """INSERT INTO creature (name, description, country, area, aka) VALUES
             (:name, :description, :country, :area, :aka)"""
     print(f"{qry=}")

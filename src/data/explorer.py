@@ -4,8 +4,7 @@ from errors import Missing, Duplicate
 
 curs.execute(
     """create table if not exists explorer(
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name text,
+                name text primary key,
                 country text,
                 description text)"""
 )

@@ -1,7 +1,17 @@
 # My_FastAPI/src/main.py
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from web import creature, explorer
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
+
 app = FastAPI()
+
+basic = HTTPBasic()
+
+@app.get("/who")
+def get_user(creds: HTTPBasicCredentials = Depends(basic)):
+    return {"username": creds.username, "password": creds.password}
+
+
 app.include_router(explorer.router)
 app.include_router(creature.router)
 

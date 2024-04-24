@@ -6,6 +6,7 @@ import data.creature as service
 router = APIRouter(prefix="/creature")
 
 
+
 @router.get("/")
 def get_all() -> list[Creature]:
     return service.get_all()

@@ -76,7 +76,8 @@ export PYTHONPATH=/home/Desktop/My_FastAPI/examples:$PYTHONPATH
   <em>............-- Type of content in the response (JSON) -</em><br>
   *date: Sat, 20 Apr 2024 19:12:50 GMT* 
   <em>............-- Date and time when the response was generated -</em><br>
-  *server: uvicorn*                     
+  *server: uvicorn*        ==================================
+(my-fastapi-py3.11) (base) ➜  My_FastAPI git:(master) ✗              
   <em>............-- Server software used to handle the request -</em><br>
 
   "top explorer endpoint"             
