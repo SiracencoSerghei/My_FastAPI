@@ -2,11 +2,13 @@ from .init import curs, conn
 from model.explorer import Explorer
 
 
-curs.execute("""create table if not exists explorer(
-                id integer  primary key,
+curs.execute(
+    """create table if not exists explorer(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name text,
                 country text,
-                description text)""")
+                description text)"""
+)
 
 
 def row_to_model(row: tuple) -> Explorer:
@@ -14,7 +16,7 @@ def row_to_model(row: tuple) -> Explorer:
 
 
 def model_to_dict(explorer: Explorer) -> dict:
-    return explorer.dict() if explorer else None
+    return explorer.model_dump() if explorer else None
 
 
 def get_one(name: str) -> Explorer:
@@ -31,6 +33,7 @@ def get_all() -> list[Explorer]:
 
 
 def create(explorer: Explorer) -> Explorer:
+    print(f"{curs=}  {conn=}")
     print(f"DATA {explorer=}")
     qry = """insert into explorer (name, country, description)
              values (:name, :country, :description)"""

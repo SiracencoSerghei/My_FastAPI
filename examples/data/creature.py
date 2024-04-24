@@ -1,21 +1,26 @@
 from .init import curs, conn
 from model.creature import Creature
 
-curs.execute("""create table if not exists creature(
-                name text primary key,
-                description text,
-                country text,
-                area text,
-                aka text)""")
+curs.execute(
+    """CREATE TABLE IF NOT EXISTS creature (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT,
+                description TEXT,
+                country TEXT,
+                area TEXT,
+                aka TEXT)"""
+)
 
 
 def row_to_model(row: tuple) -> Creature:
     (name, description, country, area, aka) = row
-    return Creature(name, description, country, area, aka)
+    return Creature(
+        name=row[0], country=row[1], description=row[2], area=row[3], aka=row[4]
+    )
 
 
 def model_to_dict(creature: Creature) -> dict:
-    return creature.dict() if creature else None
+    return creature.model_dump() if creature else None
 
 
 def get_one(name: str) -> Creature:
@@ -33,17 +38,17 @@ def get_all() -> list[Creature]:
 
 def create(creature: Creature) -> Creature:
     print(f"DATA {creature=}")
-    # qry = """INSERT INTO creature VALUES
-    #         (:name, :description, :country, :area, :aka)"""
-    # print(f"{qry=}")
-    # params = model_to_dict(creature)
-    # print(f"{params=}")
-    # data_insert = curs.execute(qry, params)
-    # print(f"{data_insert=}")
-    # conn.commit()
-    # result = get_one(creature.name)
-    # print(f"{result=}")
-    # return result
+    qry = """INSERT INTO creature (name, description, country, area, aka) VALUES
+            (:name, :description, :country, :area, :aka)"""
+    print(f"{qry=}")
+    params = model_to_dict(creature)
+    print(f"{params=}")
+    data_insert = curs.execute(qry, params)
+    print(f"{data_insert=}")
+    conn.commit()
+    result = get_one(creature.name)
+    print(f"{result=}")
+    return result
 
 
 def modify(creature: Creature) -> Creature:

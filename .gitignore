@@ -162,3 +162,5 @@ cython_debug/
 .idea/sendgrid.env
 sendgrid.env
 __pycache__
+.idea
+

@@ -11,7 +11,7 @@ def get_one(name: str)-> Creature | None:
 
 def create(creature: Creature) -> Creature:
     print(f"SERVICE {creature=}")
-    # return data.create(creature)
+    return data.create(creature)
 
 def replace(id, creature: Creature) -> Creature:
     return data.replace(id, creature)
