@@ -103,6 +103,11 @@ export PYTHONPATH=/home/Desktop/My_FastAPI/examples:$PYTHONPATH
  http localhost:9000/explorer/
  http localhost:9000/explorer
 
+ http localhost:9000/explorer/"Beau Buffette" 
+
+
+ http post localhost:9000/explorer name="Beau Buffette",contry="US", description=""
+
 ## pytest:
 
 - pytest -v test/unit/service/test_creature.py

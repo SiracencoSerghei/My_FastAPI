@@ -12,6 +12,8 @@ curs.execute(
 
 
 def row_to_model(row: tuple) -> Explorer:
+    print(f"{row=}")
+    (name, description, country) = row
     return Explorer(name=row[0], country=row[1], description=row[2])
 
 
