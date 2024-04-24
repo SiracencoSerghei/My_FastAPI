@@ -1,4 +1,4 @@
-# My_FastAPI/src/main_ex.py
+# My_FastAPI/src/main.py
 from fastapi import FastAPI
 from web import creature, explorer
 app = FastAPI()
@@ -17,4 +17,4 @@ def echo(thing) -> str:
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main_ex:app", reload=True, port=9000)
+    uvicorn.run("main:app", reload=True, port=9000)

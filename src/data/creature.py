@@ -20,7 +20,7 @@ def row_to_model(row: tuple) -> Creature:
 
 
 def model_to_dict(creature: Creature) -> dict:
-    return creature.model_dump() if creature else None
+    return creature.dict() if creature else None
 
 
 def get_one(name: str) -> Creature:
